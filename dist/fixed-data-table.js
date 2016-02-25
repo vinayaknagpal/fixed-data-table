@@ -1141,8 +1141,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 
 	    var maxScrollY = this.state.maxScrollY;
-	    var showScrollbarX = state.maxScrollX > 0 && state.overflowX !== 'hidden';
-	    var showScrollbarY = maxScrollY > 0 && state.overflowY !== 'hidden';
+	    var showScrollbarX = state.maxScrollX > 0;
+	    var showScrollbarY = maxScrollY > 0;
 	    var scrollbarXHeight = showScrollbarX ? Scrollbar.SIZE : 0;
 	    var scrollbarYHeight = state.height - scrollbarXHeight - 2 * BORDER_HEIGHT - state.footerHeight;
 
@@ -1507,7 +1507,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    var totalHeightNeeded = scrollContentHeight + totalHeightReserved;
 	    var scrollContentWidth = FixedDataTableWidthHelper.getTotalWidth(columns);
 
-	    var horizontalScrollbarVisible = scrollContentWidth > props.width && props.overflowX !== 'hidden';
+	    var horizontalScrollbarVisible = scrollContentWidth > props.width;
 
 	    if (horizontalScrollbarVisible) {
 	      bodyHeight -= Scrollbar.SIZE;
